@@ -2521,7 +2521,7 @@ figure.gallery-group .gallery-group-name:after {
   font-size: 0.8rem;
 }
 #nav #site_social_icons {
-  display: none;
+  display: block;
   margin: 0 auto;
   width: 15rem;
   text-align: center;
