@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IDEA简介 | zchen</title><meta name="description" content="百度是我们的好朋友"><meta name="keywords" content="IDEA,编译环境"><meta name="author" content="zchen"><meta name="copyright" content="zchen"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="IDEA简介"><meta name="twitter:description" content="百度是我们的好朋友"><meta name="twitter:image" content="https://zchen.fun/img/banner15.jpg"><meta property="og:type" content="article"><meta property="og:title" content="IDEA简介"><meta property="og:url" content="https://zchen.fun/2020/05/17/IDEA%E7%AE%80%E4%BB%8B/"><meta property="og:site_name" content="zchen"><meta property="og:description" content="百度是我们的好朋友"><meta property="og:image" content="https://zchen.fun/img/banner15.jpg"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      now = new Date();
+      hour = now.getHours();
+      isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="https://zchen.fun/2020/05/17/IDEA%E7%AE%80%E4%BB%8B/"><link rel="next" title="IDEA永久激活到2089年" href="https://zchen.fun/2020/03/23/IDEA%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E5%88%B02089%E5%B9%B4/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"languages":{"author":"作者: zchen","link":"链接: undefined","source":"来源: zchen","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"title":"Snackbar.bookmark.title","message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false
+}</script><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">3</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heartbeat" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/picture/"><i class="fa-fw fa fa-picture-o"></i><span> 照片</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#IDEA简介"><span class="toc-number">1.</span> <span class="toc-text">IDEA简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、什么是IDEA？"><span class="toc-number">1.1.</span> <span class="toc-text">一、什么是IDEA？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、特色功能"><span class="toc-number">1.2.</span> <span class="toc-text">二、特色功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优点"><span class="toc-number">1.3.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#快捷键"><span class="toc-number">1.4.</span> <span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">1.5.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(/img/banner15.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">zchen</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heartbeat" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/picture/"><i class="fa-fw fa fa-picture-o"></i><span> 照片</span></a></li></ul></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title"><div class="posttitle">IDEA简介</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-05-17<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-05-17</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">学习记录</a></span><div class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">1.9k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>阅读时长: 6 分钟</span><div class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-comment-o" aria-hidden="true"></i><span>评论数:</span><a href="/2020/05/17/IDEA%E7%AE%80%E4%BB%8B/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2020/05/17/IDEA%E7%AE%80%E4%BB%8B/" itemprop="commentCount"></span></a></div></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><h2 id="IDEA简介"><a href="#IDEA简介" class="headerlink" title="IDEA简介"></a>IDEA简介</h2><h3 id="一、什么是IDEA？"><a href="#一、什么是IDEA？" class="headerlink" title="一、什么是IDEA？"></a>一、什么是IDEA？</h3><p><img src="/img/loading.gif" alt="image" class="lazyload" data-src="https://upload-images.jianshu.io/upload_images/7986413-d929b872bb33fa55.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/268/format/webp"></p>
+<p><strong>IDEA</strong> 全称 <strong>IntelliJ     IDEA</strong>，是<strong>java</strong>编程语言开发的集成环境。<strong>IntelliJ</strong>在业界被公认为最好的java开发工具，尤其在智能代码助手、代码自动提示、重构、<strong>JavaEE</strong>支持、各类版本工具(==git==、==svn==等)、JUnit、CVS整合、代码分析、 创新的GUI设计等方面的功能可以说是超常的。IDEA是JetBrains公司的产品，这家公司总部位于捷克共和国的首都布拉格，开发人员以严谨著称的东欧程序员为主。它的旗舰版本还支持<strong>HTML</strong>，<strong>CSS</strong>，<strong>PHP</strong>，<strong>MySQL</strong>，<strong>Python</strong>等。免费版只支持Java等少数语言。</p>
+<hr>
+<h3 id="二、特色功能"><a href="#二、特色功能" class="headerlink" title="二、特色功能"></a>二、特色功能</h3><p>IDEA所提倡的是智能编码，是减少程序员的工作，IDEA的特色功能有以下22点 [1]  ：</p>
+<ul>
+<li>智能的选取:<br>在很多时候我们要选取某个方法，或某个循环或想一步一步从一个变量到整个类慢慢扩充着选取，IDEA就提供这种基于语法的选择，在默认设置中<code>Ctrl+W</code>，可以实现选取范围的不断扩充，这种方式在重构的时候尤其显得方便。</li>
+<li>丰富的导航模式：IDEA 提供了丰富的导航查看模式，例如 <code>Ctrl + E</code> 显示最近打开过的文件，<code>Ctrl + N</code> 显示你希望显示的类名查找框（该框同样有智能补充功能，当你输入字母后IDEA将显示所有候选类名）。在最基本的 Project 视图中，你还可以选择多种的视图方式。</li>
+<li>历史记录功能：不用通过版本管理服务器，单纯的 IDEA 就可以查看任何工程中文件的历史记录，在版本恢复时你可以很容易的将其恢复。</li>
+<li>JUnit 的完美支持</li>
+<li>对重构的优越支持：IDEA 是所有 IDE 中最早支持重构的，其优秀的重构能力一直是其主要卖点之一。</li>
+<li>编码辅助：Java 规范中提倡的 <code>toString()</code>、<code>hashCode()</code>、<code>equals()</code> 以及所有的 get/set 方法，你可以不用进行任何的输入就可以实现代码的自动生成，从而把你从无聊的基本方法编码中解放出来。</li>
+<li>灵活的排版功能：基本所有的 IDE 都有重排版功能，但仅有 IDEA 的是人性的，因为它支持排版模式的定制，你可以根据不同的项目要求采用不同的排版方式。</li>
+<li>XML 的完美支持：XML 全提示支持：所有流行框架的 XML 文件都支持全提示，谁用谁知道。</li>
+<li>动态语法检测：任何不符合 Java 规范、自己预定义的规范、累赘都将在页面中加亮显示。</li>
+<li>代码检查：对代码进行自动分析，检测不符合规范的，存在风险的代码，并加亮显示。</li>
+<li>对 JSP 的完全支持：不需要任何的插件，完全支持 JSP。</li>
+<li>智能编辑：代码输入过程中，自动补充方法或类。</li>
+<li>EJB 支持：不需要任何插件完全支持 EJB(6.0 支持 EJB 3.0)</li>
+<li>列编辑模式：用过 <code>UtralEdit</code> 的肯定对其的列编辑模式赞赏不已，因为它减少了很多无聊的重复工作，而 IDEA 完全支持该模式，从而更加提高了编码效率。</li>
+<li>预置模板：预置模板可以让你把经常用到的方法编辑进模板，使用时你只用输入简单的几个字母就可以完成全部代码的编写。例如使用比较高的 <code>public static void main(String[] args){}</code> 你可以在模板中预设 pm 为该方法，输入时你只要输入 pm 再按代码辅助键，IDEA 将完成代码的自动输入。</li>
+<li>完美的自动代码完成：智能检查类中的方法，当发现方法名只有一个时自动完成代码输入，从而减少剩下代码的编写工作。</li>
+<li>版本控制完美支持：集成了目前市面上常见的所有版本控制工具插件，包括 git、svn、github，让开发人员在编程的工程中直接在 Intellij IDEA 里就能完成代码的提交、检出、解决冲突、查看版本控制服务器内容等等。</li>
+<li>不使用代码的检查：自动检查代码中不使用的代码，并给出提示，从而使代码更高效。</li>
+<li>智能代码：自动检查代码，发现与预置规范有出入的代码给出提示，若程序员同意修改自动完成修改。例如代码：<code>String str = &quot;Hello Intellij &quot; + &quot;IDEA&quot;</code>; IDEA 将给出优化提示，若程序员同意修改 IDEA 将自动将代码修改为：<code>String str = &quot;Hello Intellij IDEA&quot;</code>;</li>
+<li>正则表达式的查找和替换功能：查找和替换支持正则表达式，从而提高效率。</li>
+<li>JavaDoc 预览支持：支持 JavaDoc 的预览功能，在 JavaDoc 代码中<code>Ctrl + Q</code> 显示 JavaDoc 的结果，从而提高 DOC 文档的质量。</li>
+<li>程序员意图支持：程序员编码时 IDEA 时时检测你的意图，或提供建议，或直接帮你完成代码。</li>
+<li><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3>最突出的功能自然是调试（Debug)，可<br>IntelliJ IDEA与其他IDE对比图<br>IntelliJ IDEA与其他IDE对比图<br>以对Java代码，JavaScript，JQuery，Ajax等技术进行调试。</li>
+</ul>
+<p>比如查看Map类型的对象，如果实现类采用的是哈希映射，则会自动过滤空的Entry实例。</p>
+<p>其次，需要动态Evaluate一个表达式的值，比如我得到了一个类的实例，但是并不知晓它的API，可以通过Code Completion点出它所支持的方法。</p>
+<p>最后，在多线程调试的情况下，Log on console的功能可以帮你检查多线程执行的情况。</p>
+<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><ol>
+<li><p>写代码时用Alt-Insert（Code|Generate…）可以创建类里面任何字段的getter与setter方法。</p>
+</li>
+<li><p>按Ctrl-N再键入类的名字可以快速地在编辑器里打开任何一个类。从显示出来的下拉列表里选择类。同样的方法你可以通过使用Ctrl-Shift-N打开工程中的非Java文件。</p>
+</li>
+<li><p>Ctrl-D复制当前行，Ctrl-Y删除当前行。</p>
+</li>
+<li><p>Ctrl-Shift-U，Ctrl+Shift+Alt+U显示类继承结构图，再按Alt-M。</p>
+</li>
+<li><p>Alt-F1 回到当前文件所在的目录结构。</p>
+</li>
+<li><p>Ctrl-Shift-V 粘贴最近复制过的一些信息。</p>
+</li>
+<li><p>Ctrl-Shift-F7 高亮显示所有该文本，按Esc高亮消失。</p>
+</li>
+<li><p>Ctrl-E 最近打开的文件。</p>
+</li>
+<li><p>Ctrl-P 方法参数提示。</p>
+</li>
+<li><p>Alt+ Up/Down 在方法间快速移动定位。</p>
+</li>
+<li><p>Ctrl+W 选中代码，连续按会有其他效果。</p>
+</li>
+<li><p>Shift + F6 选中目录结构的文件，重命名。</p>
+</li>
+<li><p>Ctrl + Alt + F12 进入当前文件所在磁盘位置。</p>
+</li>
+<li><p>Ctrl + Shift + F搜索文件。</p>
+</li>
+<li><p>Ctrl + Shift + R 搜索指定范围文件，替换文字。</p>
+</li>
+<li><p>Ctrl + Shift +W 返回上一次选择的代码块状态。</p>
+</li>
+<li><p>Ctrl + Shift + J 自动将下一行合并到当前行末尾。</p>
+</li>
+<li><p>Ctrl + Tab Switcher 导航 与 Ctrl + E 类似效果。</p>
+</li>
+<li><p>Ctrl + Shift + C 复制当前文件磁盘路径到剪贴板。 [2]</p>
+</li>
+</ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
+<p>尽管IDEA还有些不足，但作为一个超过10年生命力还如此强劲的IDEA，得到如此的美誉并不简单。更何况IDEA的很多实际功能的确走在时代的前列，至于其存在的问题我们不如包容点，毕竟有些问题在现在的硬件基础上根本就不能算是问题。<br>当然，无论如何的夸它，都只是别人的体验，若真想了解它，唯一的方法就是自己亲自去体验。</p>
+</blockquote>
+<hr>
+<ul>
+<li>文章参考</li>
+</ul>
+<blockquote>
+<p><a href="https://baike.baidu.com/item/IntelliJ%20IDEA/9548353?fromtitle=idea&fromid=1671803&fr=aladdin" target="_blank" rel="noopener">IDEA简介</a></p>
+</blockquote>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">zchen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zchen.fun/2020/05/17/IDEA%E7%AE%80%E4%BB%8B/">https://zchen.fun/2020/05/17/IDEA%E7%AE%80%E4%BB%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zchen.fun" target="_blank">zchen</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/IDEA/">IDEA    </a><a class="post-meta__tags" href="/tags/%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/">编译环境    </a></div><div class="post_share"><div class="social-share" data-image="/img/banner15.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"/><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2020/03/23/IDEA%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E5%88%B02089%E5%B9%B4/"><img class="next_cover lazyload" data-src="/img/banner10.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">IDEA永久激活到2089年</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/03/23/IDEA永久激活到2089年/" title="IDEA永久激活到2089年"><img class="relatedPosts_cover lazyload"data-src="/img/banner10.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-23</div><div class="relatedPosts_title">IDEA永久激活到2089年</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify: true,
+  verify: true,
+  appId: 'h0FFdedfmldc1kfrOb41b8Cs-gzGzoHsz',
+  appKey: 'zvEjyGD1C0nBNiXSPhSJgg6q',
+  placeholder: '请留下你的脚印👣...',
+  avatar: 'monsterid',
+  meta: guest_info,
+  pageSize: '10',
+  lang: 'zh-cn',
+  recordIP: false,
+  serverURLs: ''
+});</script></div></article></main><footer id="footer" style="background-image: url(/img/banner15.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By zchen</div><div class="footer_custom_text">Hi, welcome to my <a href="https://zchen.fun/">blog</a>!</div><div class="icp"><a href="https://zchen.fun"><img class="icp-icon" src="/img/icp.png"/><span>闽ICP备20003434号-1</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script>$(function () {
+  $('span.katex-display').wrap('<div class="katex-wrap"></div>')
+})</script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js"></script><script>document.addEventListener('DOMContentLoaded', function() {
+      pangu.spacingElementById('content-inner')
+})</script><script src="/js/search/local-search.js"></script><script>if (document.getElementsByClassName('mermaid').length) {
+  loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js',function () {
+    mermaid.initialize({
+      theme: 'default',
+  })
+})
+}</script></body></html>

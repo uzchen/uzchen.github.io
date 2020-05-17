@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>IDEA简介</title>
+      <link href="/2020/05/17/IDEA%E7%AE%80%E4%BB%8B/"/>
+      <url>/2020/05/17/IDEA%E7%AE%80%E4%BB%8B/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="IDEA简介"><a href="#IDEA简介" class="headerlink" title="IDEA简介"></a>IDEA简介</h2><h3 id="一、什么是IDEA？"><a href="#一、什么是IDEA？" class="headerlink" title="一、什么是IDEA？"></a>一、什么是IDEA？</h3><p><img src="/img/loading.gif" alt="image" class="lazyload" data-src="https://upload-images.jianshu.io/upload_images/7986413-d929b872bb33fa55.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/268/format/webp"></p><p><strong>IDEA</strong> 全称 <strong>IntelliJ     IDEA</strong>，是<strong>java</strong>编程语言开发的集成环境。<strong>IntelliJ</strong>在业界被公认为最好的java开发工具，尤其在智能代码助手、代码自动提示、重构、<strong>JavaEE</strong>支持、各类版本工具(==git==、==svn==等)、JUnit、CVS整合、代码分析、 创新的GUI设计等方面的功能可以说是超常的。IDEA是JetBrains公司的产品，这家公司总部位于捷克共和国的首都布拉格，开发人员以严谨著称的东欧程序员为主。它的旗舰版本还支持<strong>HTML</strong>，<strong>CSS</strong>，<strong>PHP</strong>，<strong>MySQL</strong>，<strong>Python</strong>等。免费版只支持Java等少数语言。</p><hr><h3 id="二、特色功能"><a href="#二、特色功能" class="headerlink" title="二、特色功能"></a>二、特色功能</h3><p>IDEA所提倡的是智能编码，是减少程序员的工作，IDEA的特色功能有以下22点 [1]  ：</p><ul><li>智能的选取:<br>在很多时候我们要选取某个方法，或某个循环或想一步一步从一个变量到整个类慢慢扩充着选取，IDEA就提供这种基于语法的选择，在默认设置中<code>Ctrl+W</code>，可以实现选取范围的不断扩充，这种方式在重构的时候尤其显得方便。</li><li>丰富的导航模式：IDEA 提供了丰富的导航查看模式，例如 <code>Ctrl + E</code> 显示最近打开过的文件，<code>Ctrl + N</code> 显示你希望显示的类名查找框（该框同样有智能补充功能，当你输入字母后IDEA将显示所有候选类名）。在最基本的 Project 视图中，你还可以选择多种的视图方式。</li><li>历史记录功能：不用通过版本管理服务器，单纯的 IDEA 就可以查看任何工程中文件的历史记录，在版本恢复时你可以很容易的将其恢复。</li><li>JUnit 的完美支持</li><li>对重构的优越支持：IDEA 是所有 IDE 中最早支持重构的，其优秀的重构能力一直是其主要卖点之一。</li><li>编码辅助：Java 规范中提倡的 <code>toString()</code>、<code>hashCode()</code>、<code>equals()</code> 以及所有的 get/set 方法，你可以不用进行任何的输入就可以实现代码的自动生成，从而把你从无聊的基本方法编码中解放出来。</li><li>灵活的排版功能：基本所有的 IDE 都有重排版功能，但仅有 IDEA 的是人性的，因为它支持排版模式的定制，你可以根据不同的项目要求采用不同的排版方式。</li><li>XML 的完美支持：XML 全提示支持：所有流行框架的 XML 文件都支持全提示，谁用谁知道。</li><li>动态语法检测：任何不符合 Java 规范、自己预定义的规范、累赘都将在页面中加亮显示。</li><li>代码检查：对代码进行自动分析，检测不符合规范的，存在风险的代码，并加亮显示。</li><li>对 JSP 的完全支持：不需要任何的插件，完全支持 JSP。</li><li>智能编辑：代码输入过程中，自动补充方法或类。</li><li>EJB 支持：不需要任何插件完全支持 EJB(6.0 支持 EJB 3.0)</li><li>列编辑模式：用过 <code>UtralEdit</code> 的肯定对其的列编辑模式赞赏不已，因为它减少了很多无聊的重复工作，而 IDEA 完全支持该模式，从而更加提高了编码效率。</li><li>预置模板：预置模板可以让你把经常用到的方法编辑进模板，使用时你只用输入简单的几个字母就可以完成全部代码的编写。例如使用比较高的 <code>public static void main(String[] args){}</code> 你可以在模板中预设 pm 为该方法，输入时你只要输入 pm 再按代码辅助键，IDEA 将完成代码的自动输入。</li><li>完美的自动代码完成：智能检查类中的方法，当发现方法名只有一个时自动完成代码输入，从而减少剩下代码的编写工作。</li><li>版本控制完美支持：集成了目前市面上常见的所有版本控制工具插件，包括 git、svn、github，让开发人员在编程的工程中直接在 Intellij IDEA 里就能完成代码的提交、检出、解决冲突、查看版本控制服务器内容等等。</li><li>不使用代码的检查：自动检查代码中不使用的代码，并给出提示，从而使代码更高效。</li><li>智能代码：自动检查代码，发现与预置规范有出入的代码给出提示，若程序员同意修改自动完成修改。例如代码：<code>String str = &quot;Hello Intellij &quot; + &quot;IDEA&quot;</code>; IDEA 将给出优化提示，若程序员同意修改 IDEA 将自动将代码修改为：<code>String str = &quot;Hello Intellij IDEA&quot;</code>;</li><li>正则表达式的查找和替换功能：查找和替换支持正则表达式，从而提高效率。</li><li>JavaDoc 预览支持：支持 JavaDoc 的预览功能，在 JavaDoc 代码中<code>Ctrl + Q</code> 显示 JavaDoc 的结果，从而提高 DOC 文档的质量。</li><li>程序员意图支持：程序员编码时 IDEA 时时检测你的意图，或提供建议，或直接帮你完成代码。</li><li><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3>最突出的功能自然是调试（Debug)，可<br>IntelliJ IDEA与其他IDE对比图<br>IntelliJ IDEA与其他IDE对比图<br>以对Java代码，JavaScript，JQuery，Ajax等技术进行调试。</li></ul><p>比如查看Map类型的对象，如果实现类采用的是哈希映射，则会自动过滤空的Entry实例。</p><p>其次，需要动态Evaluate一个表达式的值，比如我得到了一个类的实例，但是并不知晓它的API，可以通过Code Completion点出它所支持的方法。</p><p>最后，在多线程调试的情况下，Log on console的功能可以帮你检查多线程执行的情况。</p><h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><ol><li><p>写代码时用Alt-Insert（Code|Generate…）可以创建类里面任何字段的getter与setter方法。</p></li><li><p>按Ctrl-N再键入类的名字可以快速地在编辑器里打开任何一个类。从显示出来的下拉列表里选择类。同样的方法你可以通过使用Ctrl-Shift-N打开工程中的非Java文件。</p></li><li><p>Ctrl-D复制当前行，Ctrl-Y删除当前行。</p></li><li><p>Ctrl-Shift-U，Ctrl+Shift+Alt+U显示类继承结构图，再按Alt-M。</p></li><li><p>Alt-F1 回到当前文件所在的目录结构。</p></li><li><p>Ctrl-Shift-V 粘贴最近复制过的一些信息。</p></li><li><p>Ctrl-Shift-F7 高亮显示所有该文本，按Esc高亮消失。</p></li><li><p>Ctrl-E 最近打开的文件。</p></li><li><p>Ctrl-P 方法参数提示。</p></li><li><p>Alt+ Up/Down 在方法间快速移动定位。</p></li><li><p>Ctrl+W 选中代码，连续按会有其他效果。</p></li><li><p>Shift + F6 选中目录结构的文件，重命名。</p></li><li><p>Ctrl + Alt + F12 进入当前文件所在磁盘位置。</p></li><li><p>Ctrl + Shift + F搜索文件。</p></li><li><p>Ctrl + Shift + R 搜索指定范围文件，替换文字。</p></li><li><p>Ctrl + Shift +W 返回上一次选择的代码块状态。</p></li><li><p>Ctrl + Shift + J 自动将下一行合并到当前行末尾。</p></li><li><p>Ctrl + Tab Switcher 导航 与 Ctrl + E 类似效果。</p></li><li><p>Ctrl + Shift + C 复制当前文件磁盘路径到剪贴板。 [2]</p></li></ol><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote><p>尽管IDEA还有些不足，但作为一个超过10年生命力还如此强劲的IDEA，得到如此的美誉并不简单。更何况IDEA的很多实际功能的确走在时代的前列，至于其存在的问题我们不如包容点，毕竟有些问题在现在的硬件基础上根本就不能算是问题。<br>当然，无论如何的夸它，都只是别人的体验，若真想了解它，唯一的方法就是自己亲自去体验。</p></blockquote><hr><ul><li>文章参考</li></ul><blockquote><p><a href="https://baike.baidu.com/item/IntelliJ%20IDEA/9548353?fromtitle=idea&fromid=1671803&fr=aladdin" target="_blank" rel="noopener">IDEA简介</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IDEA </tag>
+            
+            <tag> 编译环境 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>IDEA永久激活到2089年</title>
       <link href="/2020/03/23/IDEA%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E5%88%B02089%E5%B9%B4/"/>
       <url>/2020/03/23/IDEA%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E5%88%B02089%E5%B9%B4/</url>
